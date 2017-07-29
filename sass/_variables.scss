@@ -1,0 +1,22 @@
+$size-main-width: 1100px;
+$size-post-width: 800px;
+
+$bkpt-phone: 400px;
+$bkpt-tablet: 782px;
+
+$font-text: 'Source Sans Pro';
+
+$color-text: #384A48; //162B32
+$color-meta: #666;
+
+$color-1: lighten( $color-text, 10 );
+$color-2: lighten( $color-text, 20 ); // Fails AA contrast against white
+$color-3: lighten( $color-text, 30 );
+$color-4: lighten( $color-text, 40 );
+$color-5: lighten( $color-text, 50 );
+
+$teal: #00B096;
+
+$blue-dark: #085B74;
+$blue: #008BB5;
+$blue-light: #A2CBD7;

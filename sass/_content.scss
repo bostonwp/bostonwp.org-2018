@@ -1,0 +1,121 @@
+.site-main {
+	margin: 60px auto 0;
+	padding: 0 30px;
+	max-width: $size-post-width;
+
+	.hentry + .hentry {
+		margin: 40px 0;
+		padding: 60px 0 0;
+	}
+
+	.wp-post-image {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.wp-post-image + .hentry {
+		margin-top: 40px;
+	}
+
+	.entry-header {
+		margin: 0;
+		text-align: center;
+	}
+
+	.entry-title {
+		margin: 0 0 10px;
+		@include uppercase( 2.4, 6 );
+
+		@media ( max-width: $bkpt-tablet ) {
+			letter-spacing: 2px;
+		}
+
+		a {
+			color: $color-text;
+
+			@include hover-state {
+				text-decoration: none;
+				color: $blue;
+			}
+		}
+	}
+
+	.entry-meta {
+		color: $color-meta;
+		@include uppercase( 1.3, 3 );
+
+		a {
+			font-style: italic;
+		}
+	}
+
+	footer.entry-meta {
+		display: none;
+	}
+
+	.entry-content,
+	.entry-summary {
+		margin: 30px 0 0;
+	}
+
+	.paging-navigation,
+	.post-navigation {
+		margin: 60px -30px 0;
+		@include uppercase( 1.3, 3 );
+		position: relative;
+
+		.meta-nav {
+			position: absolute;
+			display: inline-block;
+			width: 25px;
+		}
+
+		.nav-previous {
+			padding-left: 25px;
+
+			.meta-nav {
+				left: 0;
+			}
+		}
+
+		.nav-next {
+			padding-right: 25px;
+
+			.meta-nav {
+				right: 0;
+			}
+		}
+	}
+
+	@media ( max-width: 600px ) {
+		padding: 0;
+
+		.paging-navigation,
+		.post-navigation {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.nav-previous,
+		.nav-next {
+			float: none;
+			width: 100%;
+		}
+
+		.nav-previous + .nav-next {
+			margin-top: 20px;
+		}
+	}
+}
+
+@import 'content/home';
+// @import 'content/contact';
+// @import 'content/sponsors';
+// @import 'content/organizers';
+// @import 'content/tickets';
+// @import 'content/schedule';
+// @import 'content/speakers';
+// @import 'content/attendees';
+// @import 'content/day-of';
+// @import 'content/social-media';

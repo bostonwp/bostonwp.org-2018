@@ -1,0 +1,23 @@
+.blog #content,
+.home:not(.page) #content {
+	&:before {
+		content: "Recent Posts";
+		display: block;
+		margin-bottom: 50px;
+		@include uppercase( 2.4, 6 );
+		text-align: center;
+	}
+
+	.entry-title {
+		@include font-size( 2.0 );
+		letter-spacing: 4px;
+
+		@media ( max-width: $bkpt-tablet ) {
+			letter-spacing: 2px;
+		}
+	}
+
+	footer.entry-meta {
+		display: none;
+	}
+}

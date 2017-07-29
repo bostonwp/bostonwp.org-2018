@@ -1,0 +1,32 @@
+.comments-area {
+	margin: 40px 0 0;
+}
+
+.comments-title,
+.comment-reply-title {
+	margin: 40px 0;
+	@include uppercase( 1.8 );
+}
+
+.commentlist {
+	list-style: none;
+	margin: 0;
+
+	.children {
+		list-style: none;
+		margin: 0 0 0 20px;
+	}
+
+	article.comment {
+		margin-bottom: 40px;
+
+		.avatar {
+			margin-right: 10px;
+		}
+
+		.comment-meta {
+			text-align: right;
+			@include font-size( 1.4 );
+		}
+	}
+}
