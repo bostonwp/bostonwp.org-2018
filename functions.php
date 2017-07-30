@@ -111,7 +111,7 @@ function bostonwp_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Front Page Top', 'bostonwp' ),
+		'name'          => esc_html__( 'Front Page Callout', 'bostonwp' ),
 		'id'            => 'sidebar-front-1',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -119,8 +119,16 @@ function bostonwp_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Front Page Bottom', 'bostonwp' ),
+		'name'          => esc_html__( 'Front Page Footer', 'bostonwp' ),
 		'id'            => 'sidebar-front-2',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer', 'bostonwp' ),
+		'id'            => 'sidebar-footer',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

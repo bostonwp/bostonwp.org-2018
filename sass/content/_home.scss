@@ -9,7 +9,7 @@
 .site-image {
 	position: relative;
 	text-align: center;
-	background: $grey-light;
+	background: $grey-mid;
 
 	.site-description {
 		position: absolute;
@@ -94,5 +94,37 @@
 	.entry-link {
 		margin-top: 5px;
 		@include font-size( 1.6 );
+	}
+}
+
+.site-main-callout {
+	padding: 50px 0;
+	@include content-on-teal;
+
+	.container {
+		max-width: 800px;
+	}
+
+	.entry-content {
+		margin-top: 0;
+	}
+
+	h2 {
+		text-align: center;
+		@include font-size( 3.2 );
+	}
+}
+
+.front-page-footer-widget-area {
+	padding: 50px 0;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.widget {
+		flex: 1;
+		text-align: center;
 	}
 }

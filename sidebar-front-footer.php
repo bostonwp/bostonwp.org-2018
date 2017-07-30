@@ -12,6 +12,8 @@ if ( ! is_active_sidebar( 'sidebar-front-2' ) ) {
 }
 ?>
 
-<aside id="sidebar-front-2" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-front-2' ); ?>
+<aside id="sidebar-front-2" class="widget-area front-page-footer-widget-area">
+	<div class="container">
+		<?php dynamic_sidebar( 'sidebar-front-2' ); ?>
+	</div>
 </aside><!-- #sidebar-front-2 -->
