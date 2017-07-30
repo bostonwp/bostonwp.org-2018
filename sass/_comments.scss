@@ -5,7 +5,7 @@
 .comments-title,
 .comment-reply-title {
 	margin: 40px 0;
-	@include uppercase( 1.8 );
+	@include font-size( 1.8 );
 }
 
 .commentlist {

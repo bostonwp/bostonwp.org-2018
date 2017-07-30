@@ -1,0 +1,19 @@
+.home {
+	.site-main {
+		padding: 0;
+		max-width: $size-main-width;
+	}
+}
+
+.events-list {
+	display: flex;
+}
+
+.events-list .post {
+	flex: 1;
+
+	& + .post {
+		margin-top: 0;
+		padding-top: 0;
+	}
+}

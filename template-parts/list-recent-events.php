@@ -13,6 +13,7 @@ $events_query = new WP_Query( array (
 ) );
 
 if ( $events_query->have_posts() ) : ?>
+<h2 class="page-title">Catch Up on Recent Events</h2>
 <div class="events-list">
 	<?php while( $events_query->have_posts() ) {
 		$events_query->the_post();
