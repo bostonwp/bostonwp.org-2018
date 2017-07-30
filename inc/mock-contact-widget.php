@@ -19,26 +19,21 @@ class Mock_Subscriptions_Widget extends WP_Widget {
 
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
-		echo $args['before_title'] . 'Subscribe to keep up-to-date' . $args['after_title']; ?>
+		echo $args['before_title'] . 'Keep Up with WordPress in the Greater Boston Area' . $args['after_title']; ?>
 
 		<form class="description" id="theform" name="theform">
-			<div class="container rounded">
-				<div class="header">
-					<h2 class="widgettitle">Keep Up with WordPress in the Greater Boston Area</h2>
+			<div class="primary-group email-group forms-builder-group ui-sortable">
+				<div class="row mandatory-email">
+					<label for="sub-email">Enter your email address to subscribe.</label>
+					<input id="sub-email" name="email" type="text" value="" />
 				</div>
-				<div class="primary-group email-group forms-builder-group ui-sortable">
-					<div class="row mandatory-email">
-						<label for="sub-email">Enter your email address to subscribe.</label>
-						<input id="sub-email" name="email" type="text" value="" />
-					</div>
-					<div class="row">
-						<label for="sub-name">Name</label>
-						<input id="sub-name" name="name" type="text" value="" />
-					</div>
-				</div><!-- end of primary -->
-				<div class="byline">
-					<button class="button" type="submit">Subscribe</button>
+				<div class="row">
+					<label for="sub-name">Name</label>
+					<input id="sub-name" name="name" type="text" value="" />
 				</div>
+			</div><!-- end of primary -->
+			<div class="byline">
+				<button class="button" type="submit">Subscribe</button>
 			</div>
 		</form>
 		<?php echo $args['after_widget'];
