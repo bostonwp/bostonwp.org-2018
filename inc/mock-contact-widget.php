@@ -24,12 +24,11 @@ class Mock_Subscriptions_Widget extends WP_Widget {
 		<form class="description" id="theform" name="theform">
 			<div class="primary-group email-group forms-builder-group ui-sortable">
 				<div class="row mandatory-email">
-					<label for="sub-email">Enter your email address to subscribe.</label>
-					<input id="sub-email" name="email" type="text" value="" />
+					<p>Sign up for our mailing list to get emails about local events.</p>
 				</div>
-				<div class="row">
-					<label for="sub-name">Name</label>
-					<input id="sub-name" name="name" type="text" value="" />
+				<div class="row mandatory-email">
+					<label for="sub-email">Email address:</label>
+					<input id="sub-email" name="email" type="text" value="" />
 				</div>
 			</div><!-- end of primary -->
 			<div class="byline">
