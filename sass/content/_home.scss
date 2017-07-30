@@ -5,6 +5,19 @@
 	}
 }
 
+.site-image {
+	text-align: center;
+
+	.site-description {
+		position: relative;
+		display: inline-block;
+		top: -50px;
+		padding: 20px 50px;
+		background: white;
+		@include font-size( 3.4 );
+	}
+}
+
 .events-list {
 	display: flex;
 }
