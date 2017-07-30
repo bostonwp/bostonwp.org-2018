@@ -1,8 +1,4 @@
 .site-main {
-	margin: 60px auto 0;
-	padding: 0 30px;
-	max-width: $size-post-width;
-
 	.hentry + .hentry {
 		margin: 40px 0;
 		padding: 60px 0 0;
@@ -108,4 +104,29 @@
 	}
 }
 
+// Layout for all pages but home
+body:not(.home) {
+	.site-content {
+		margin: 60px auto 0;
+		max-width: $size-main-width;
+	}
+
+	.content-area {
+		float: left;
+		margin: 0 (-$size-sidebar-width) 0 0;
+		width: $size-post-width;
+	}
+
+	.site-content .widget-area {
+		float: right;
+		overflow: hidden;
+		width: $size-sidebar-width;
+	}
+
+	.footer-widget-area {
+		clear: both;
+	}
+}
+
+@import 'content/single';
 @import 'content/home';
