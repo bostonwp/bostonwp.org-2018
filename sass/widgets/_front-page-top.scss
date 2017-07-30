@@ -1,0 +1,12 @@
+#sidebar-front-1 {
+	display: flex;
+	justify-content: space-between;
+
+	.widget {
+		flex: 1;
+	}
+
+	.widget + .widget {
+		margin-left: 50px;
+	}
+}
