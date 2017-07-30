@@ -89,7 +89,7 @@ add_action( 'after_setup_theme', 'bostonwp_setup' );
  * @global int $content_width
  */
 function bostonwp_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'bostonwp_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'bostonwp_content_width', 800 );
 }
 add_action( 'after_setup_theme', 'bostonwp_content_width', 0 );
 
@@ -115,12 +115,11 @@ add_action( 'widgets_init', 'bostonwp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bostonwp_scripts() {
-	wp_enqueue_style( 'bostonwp-style', get_stylesheet_uri(), array(), BOSTONWP_VERSION );
+	wp_enqueue_style( 'bostonwp-fonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700' );
+	wp_enqueue_style( 'bostonwp-style', get_stylesheet_uri(), array( 'bostonwp-fonts' ), BOSTONWP_VERSION );
 
 	wp_enqueue_script( 'bostonwp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'bostonwp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
