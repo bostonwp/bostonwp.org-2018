@@ -46,3 +46,18 @@
 	width: 1px;
 	overflow: hidden;
 }
+
+@mixin content-on-teal() {
+	background: $teal;
+	color: white;
+	@include light-on-dark;
+
+	a {
+		color: white;
+		text-decoration: underline;
+
+		@include hover-state {
+			color: desaturate( mix( white, $teal, 85% ), 10% );
+		}
+	}
+}

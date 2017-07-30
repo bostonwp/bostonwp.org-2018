@@ -1,32 +1,57 @@
 .home {
 	.site-main {
 		padding: 0;
-		max-width: $size-main-width;
+		margin-top: 0;
+		max-width: 100%; //$size-main-width;
 	}
 }
 
 .site-image {
+	position: relative;
 	text-align: center;
+	background: $grey-light;
 
 	.site-description {
-		position: relative;
+		position: absolute;
 		display: inline-block;
-		top: -50px;
+		bottom: -45px;
+		left: calc( 50% - 335px );
+		margin: 0;
 		padding: 20px 50px;
 		background: white;
 		@include font-size( 3.4 );
 	}
 }
 
-.events-list {
-	display: flex;
+.front-page-widget-area {
+	padding: 85px 0 50px;
+	@include content-on-teal;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.widget {
+		flex: 1;
+	}
+
+	.widget + .widget {
+		margin-left: 50px;
+	}
 }
 
-.events-list .post {
-	flex: 1;
+.site-events-list.site-events-list { // yeah specificity
+	display: flex;
 
-	& + .post {
-		margin-top: 0;
-		padding-top: 0;
+	.post {
+		flex: 1;
+		margin: 0;
+
+		& + .post {
+			margin-top: 0;
+			margin-left: 25px;
+			padding-top: 0;
+		}
 	}
 }
