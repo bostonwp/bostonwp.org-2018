@@ -24,14 +24,10 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-			the_excerpt();
-			bostonwp_view_post_link();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bostonwp' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
+
+	<div class="entry-link">
+		<?php bostonwp_view_post_link(); ?> &rarr;
+	</div><!-- .entry-link -->
 </article><!-- #post-<?php the_ID(); ?> -->

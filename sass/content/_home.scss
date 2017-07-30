@@ -41,17 +41,58 @@
 	}
 }
 
-.site-events-list.site-events-list { // yeah specificity
-	display: flex;
+.site-events {
+	padding: 50px 0;
 
-	.post {
-		flex: 1;
-		margin: 0;
+	.page-title {
+		text-align: center;
+		margin-bottom: 50px;
+	}
 
-		& + .post {
-			margin-top: 0;
-			margin-left: 25px;
-			padding-top: 0;
+	.site-events-list {
+		display: flex;
+
+		.post {
+			flex: 1;
+			margin: 0;
+
+			& + .post {
+				margin-top: 0;
+				margin-left: 25px;
+				padding-top: 0;
+			}
 		}
+	}
+
+	.entry-header {
+		text-align: center;
+	}
+
+	.entry-title {
+		margin: 25px 0 10px;
+	}
+
+	.entry-content {
+		margin-top: 15px;
+		@include font-size( 1.6 );
+
+		max-height: 120px;
+		position: relative;
+		overflow: hidden;
+
+		p:after {
+			position: absolute;
+			bottom: 0;
+			content: '';
+			height: 24px;
+			width: 100%;
+			z-index: 10;
+			background-image: linear-gradient(to right, transparent, white 40%);
+		}
+	}
+
+	.entry-link {
+		margin-top: 5px;
+		@include font-size( 1.6 );
 	}
 }
