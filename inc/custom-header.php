@@ -2,10 +2,6 @@
 /**
  * Sample implementation of the Custom Header feature
  *
- * You can add an optional custom header image to header.php like so ...
- *
-	<?php the_header_image_tag(); ?>
- *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
  * @package Boston_WordPress
@@ -20,8 +16,8 @@ function bostonwp_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'bostonwp_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 1400,
+		'height'                 => 300,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'bostonwp_header_style',
 	) ) );

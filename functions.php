@@ -46,6 +46,9 @@ function bostonwp_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 800, 600 );
+	add_image_size( '3up-thumbnail', 320, 9999 ); // 320 pixels wide (and unlimited height)
+
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -73,8 +76,7 @@ function bostonwp_setup() {
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 250,
-		'width'       => 250,
+		'width'       => 300,
 		'flex-width'  => true,
 		'flex-height' => true,
 	) );

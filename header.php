@@ -48,4 +48,14 @@
 		</div>
 	</header><!-- #masthead -->
 
+	<?php if ( is_front_page() ) : ?>
+	<div class="site-image">
+		<?php the_header_image_tag(); ?>
+		<?php $description = get_bloginfo( 'description', 'display' );
+		if ( $description || is_customize_preview() ) : ?>
+			<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+		<?php endif; ?>
+	</div>
+	<?php endif; ?>
+
 	<div id="content" class="site-content">
