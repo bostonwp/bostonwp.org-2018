@@ -108,7 +108,9 @@
 body:not(.home) {
 	.site-content {
 		margin: 60px auto 0;
+		padding-bottom: 50px;
 		max-width: $size-main-width;
+		overflow: hidden;
 	}
 
 	.content-area {
@@ -128,5 +130,5 @@ body:not(.home) {
 	}
 }
 
-@import 'content/single';
+@import 'content/sidebar';
 @import 'content/home';
