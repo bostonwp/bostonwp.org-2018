@@ -54,6 +54,8 @@
 	}
 
 	ul {
+		display: none;
+
 		li {
 			position: relative;
 			display: inline-block;
@@ -104,6 +106,15 @@
 			}
 		}
 	}
+}
+
+.menu-toggle {
+	display: inline-block;
+	color: white;
+}
+
+.main-navigation.toggled ul {
+	display: block;
 }
 
 @media screen and (min-width: $bkpt-tablet) {

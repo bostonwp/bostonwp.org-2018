@@ -4,6 +4,7 @@
 
 	.container {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
@@ -34,6 +35,19 @@
 
 		@include hover-state {
 			color: darken( $teal, 10% );
+		}
+	}
+
+	@media screen and (max-width: $bkpt-tablet) {
+		.widget {
+			min-width: 50%;
+			margin-bottom: 25px;
+		}
+	}
+
+	@media screen and (max-width: $bkpt-phone) {
+		.widget {
+			min-width: 100%;
 		}
 	}
 }
