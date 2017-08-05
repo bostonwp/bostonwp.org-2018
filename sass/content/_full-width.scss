@@ -1,0 +1,34 @@
+body.page-template-full-width {
+	.site-content {
+		overflow: visible;
+	}
+
+	.content-area {
+		float: none;
+		margin: 0 0 60px;
+	}
+
+	.site-main {
+		margin: 0;
+	}
+
+	.site-content .widget-area {
+		float: none;
+		overflow: visible;
+		width: 100%;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.widget {
+			flex: 1;
+			min-width: 300px;
+
+			& + .widget {
+				margin-top: 0;
+				padding-left: 50px;
+			}
+		}
+	}
+}

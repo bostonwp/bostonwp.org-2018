@@ -111,6 +111,15 @@ function bostonwp_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar (full-width)', 'bostonwp' ),
+		'id'            => 'sidebar-full-width',
+		'description'   => esc_html__( 'Looks best with 3 widgets.', 'bostonwp' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Front Page Callout', 'bostonwp' ),
 		'id'            => 'sidebar-front-1',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
