@@ -1,0 +1,62 @@
+.rp4wp-related-job_listing > ul,
+ul.job_listings {
+	li.job_listing {
+		div.position .company,
+		div.location,
+		.meta {
+			color: $color-meta !important;
+		}
+	}
+
+	.site-main & .hentry + .hentry {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.job-manager-application-wrapper,
+.single_job_listing {
+	.company .name,
+	.company .tagline {
+		margin-left: 54px;
+		padding-left: 18px;
+	}
+
+	.meta .location,
+	.meta .date-posted,
+	.company .tagline {
+		color: $color-meta !important;
+	}
+
+	.application .application_details {
+		color: $color-text;
+		background: transparent;
+		border: 2px solid currentColor;
+		border-radius: 0;
+		box-shadow: none;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.single_job_listing .company {
+	border: 1px solid rgba( $color-meta, 0.4 );
+	box-shadow: 0 1px 1px rgba( $color-meta, 0.1 );
+
+	.name,
+	.tagline {
+		margin-left: 54px;
+		padding-left: 18px;
+	}
+
+	.tagline {
+		color: $color-meta !important;
+	}
+}
+
+table.job-manager-jobs {
+	width: 100%;
+}
