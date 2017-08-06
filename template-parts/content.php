@@ -10,6 +10,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( has_post_thumbnail() ) : ?>
+	<div class="entry-image">
+		<?php the_post_thumbnail(); ?>
+	</div>
+	<?php endif; ?>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -48,7 +53,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-meta">
 		<?php bostonwp_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

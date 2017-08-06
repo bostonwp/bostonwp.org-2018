@@ -8,16 +8,17 @@
 	@include font-size( 1.8 );
 }
 
-.commentlist {
+.comment-list {
 	list-style: none;
 	margin: 0;
+	padding: 0;
 
 	.children {
 		list-style: none;
 		margin: 0 0 0 20px;
 	}
 
-	article.comment {
+	.comment {
 		margin-bottom: 40px;
 
 		.avatar {
@@ -25,7 +26,7 @@
 		}
 
 		.comment-meta {
-			text-align: right;
+			color: $color-meta;
 			@include font-size( 1.4 );
 		}
 	}

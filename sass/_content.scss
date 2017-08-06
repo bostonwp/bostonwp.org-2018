@@ -4,6 +4,10 @@
 		padding: 60px 0 0;
 	}
 
+	.entry-image {
+		background: $grey-mid;
+	}
+
 	.wp-post-image {
 		display: block;
 		margin: 0 auto 40px;
@@ -33,15 +37,19 @@
 
 	.entry-meta {
 		color: $color-meta;
-		@include font-size( 1.2 );
+		@include font-size( 1.4 );
+
+		span + span {
+			margin-left: 8px;
+		}
 
 		a {
 			font-style: italic;
 		}
-	}
 
-	footer.entry-meta {
-		display: none;
+		.byline {
+			display: none;
+		}
 	}
 
 	.entry-content,
@@ -51,30 +59,21 @@
 
 	.paging-navigation,
 	.post-navigation {
-		margin: 60px -30px 0;
-		@include font-size( 1.2 );
-		position: relative;
-
-		.meta-nav {
-			position: absolute;
-			display: inline-block;
-			width: 25px;
+		margin: 60px 0 0;
+		@include font-size( 1.4 );
+		.nav-links {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 
-		.nav-previous {
-			padding-left: 25px;
-
-			.meta-nav {
-				left: 0;
-			}
+		.nav-previous,
+		.nav-next {
+			flex: 1;
 		}
 
 		.nav-next {
-			padding-right: 25px;
-
-			.meta-nav {
-				right: 0;
-			}
+			text-align: right;
 		}
 	}
 
