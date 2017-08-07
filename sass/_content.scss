@@ -4,6 +4,14 @@
 		padding: 60px 0 0;
 	}
 
+	.page-header {
+		margin-bottom: 40px;
+	}
+
+	.page-title {
+		margin-bottom: 10px;
+	}
+
 	.entry-image {
 		background: $grey-mid;
 	}
@@ -49,6 +57,11 @@
 
 		.byline {
 			display: none;
+
+			body.single & {
+				display: inline;
+				margin-left: 4px;
+			}
 		}
 	}
 
@@ -57,7 +70,7 @@
 		margin: 30px 0 0;
 	}
 
-	.paging-navigation,
+	.posts-navigation,
 	.post-navigation {
 		margin: 60px 0 0;
 		@include font-size( 1.4 );
