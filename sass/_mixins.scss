@@ -2,19 +2,21 @@
 @mixin font-size($sizeValue: 1.6, $lineHeight: false ) {
 	font-size: ($sizeValue * 10) + px;
 	font-size: $sizeValue + rem;
-	@if ( $lineHeight ) {
+	@if ($lineHeight) {
 		line-height: $lineHeight;
 	}
 }
 
 @mixin hover-state {
-	&:hover, &:active, &:focus {
+	&:hover,
+	&:active,
+	&:focus {
 		@content;
 	}
 }
 
 @mixin clearfix() {
-	content: "";
+	content: '';
 	display: table;
 	table-layout: fixed;
 }
@@ -29,7 +31,7 @@
 }
 
 @mixin uppercase( $sizeValue: false, $letterSpace: 4 ) {
-	@if ( $sizeValue ) {
+	@if ($sizeValue) {
 		@include font-size( $sizeValue );
 	}
 	font-weight: bold;
@@ -40,7 +42,7 @@
 }
 
 @mixin sr-clip() {
-	clip: rect( 1px, 1px, 1px, 1px );
+	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 	height: 1px;
 	width: 1px;
@@ -57,15 +59,15 @@
 		text-decoration: underline;
 
 		@include hover-state {
-			color: desaturate( mix( white, $teal, 85% ), 10% );
+			color: desaturate(mix(white, $teal, 85%), 10%);
 		}
 	}
 
-	input[type="text"],
-	input[type="email"],
-	input[type="url"],
-	input[type="password"],
-	input[type="search"],
+	input[type='text'],
+	input[type='email'],
+	input[type='url'],
+	input[type='password'],
+	input[type='search'],
 	select,
 	textarea,
 	input[type='button'],

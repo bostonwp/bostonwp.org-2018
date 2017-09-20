@@ -34,7 +34,7 @@
 		color: $teal;
 
 		@include hover-state {
-			color: darken( $teal, 10% );
+			color: darken($teal, 10%);
 		}
 	}
 

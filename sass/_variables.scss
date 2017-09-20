@@ -7,20 +7,20 @@ $bkpt-tablet: 782px;
 
 $font-text: 'Source Sans Pro';
 
-$color-text: #384A48; //162B32
+$color-text: #384a48; //162B32
 $color-meta: #666;
 
-$color-1: lighten( $color-text, 10 );
-$color-2: lighten( $color-text, 20 ); // Fails AA contrast against white
-$color-3: lighten( $color-text, 30 );
-$color-4: lighten( $color-text, 40 );
-$color-5: lighten( $color-text, 50 );
+$color-1: lighten($color-text, 10);
+$color-2: lighten($color-text, 20); // Fails AA contrast against white
+$color-3: lighten($color-text, 30);
+$color-4: lighten($color-text, 40);
+$color-5: lighten($color-text, 50);
 
-$teal: #00B096;
+$teal: #00b096;
 
-$blue-dark: #085B74;
-$blue: #008BB5;
-$blue-light: #A2CBD7;
+$blue-dark: #085b74;
+$blue: #008bb5;
+$blue-light: #a2cbd7;
 
-$grey-mid: #CBD0D4;
-$grey-light: #F4F5F6;
+$grey-mid: #cbd0d4;
+$grey-light: #f4f5f6;

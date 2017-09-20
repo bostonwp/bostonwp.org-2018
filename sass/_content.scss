@@ -29,7 +29,7 @@
 		margin: 0 0 10px;
 		@include font-size( 2.2, 1.2 );
 
-		@media ( max-width: $bkpt-tablet ) {
+		@media (max-width: $bkpt-tablet) {
 			letter-spacing: 2px;
 		}
 
@@ -90,7 +90,7 @@
 		}
 	}
 
-	@media ( max-width: 600px ) {
+	@media (max-width: 600px) {
 		padding: 0;
 
 		.paging-navigation,
