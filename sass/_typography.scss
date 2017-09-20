@@ -56,6 +56,9 @@ a:visited {
 		text-decoration: underline;
 	}
 }
+a:focus {
+	outline-color: currentColor;
+}
 
 .entry-content {
 	h1,
