@@ -26,7 +26,7 @@ textarea {
 	margin: 0 auto;
 	max-width: $size-main-width;
 
-	@media ( max-width: $size-main-width + 40px ) {
+	@media (max-width: $size-main-width + 40px) {
 		margin: 0 20px;
 	}
 }
@@ -46,18 +46,20 @@ img {
 	vertical-align: middle;
 }
 
-a, a:visited {
+a,
+a:visited {
 	color: $blue-dark;
 	text-decoration: none;
 
 	@include hover-state {
-		color: darken( $blue-dark, 5% );
+		color: darken($blue-dark, 5%);
 		text-decoration: underline;
 	}
 }
 
 .entry-content {
-	h1, h2 {
+	h1,
+	h2 {
 		margin: 0 0 15px;
 		line-height: 1.32143;
 	}
@@ -68,15 +70,15 @@ a, a:visited {
 		@include font-size( 2.4 );
 	}
 	h3 {
-		@include font-size( 2.0 );
+		@include font-size( 2 );
 	}
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
 select,
 textarea {
 	margin: 0;
@@ -95,11 +97,11 @@ textarea {
 	}
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'] {
 	padding: 10px 15px;
 }
 
