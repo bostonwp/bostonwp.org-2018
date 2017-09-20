@@ -2,7 +2,7 @@
 	background: $blue;
 
 	.container {
-		display: flex;
+		display: block;
 	}
 }
 
@@ -34,32 +34,30 @@
 
 		&:focus {
 			color: white;
-			outline-color: lighten( $blue-light, 10 );
+			outline-color: lighten($blue-light, 10);
 		}
 	}
 }
 
 .main-navigation {
-	flex: 1;
 	margin: 0;
-	padding: 0;
-	text-align: right;
+	padding: 0 0 20px;
 
 	a {
 		display: inline-block;
 		padding: 20px 20px 14px 0;
-		color: lighten( $blue-light, 20 );
+		color: lighten($blue-light, 20);
 		font-weight: bold;
 		text-decoration: none;
 		@include light-on-dark;
 
 		@include hover-state {
-			color: lighten( $blue-light, 5 );
+			color: lighten($blue-light, 5);
 			text-decoration: underline;
 		}
 
 		&:focus {
-			outline-color: lighten( $blue-light, 10 );
+			outline-color: lighten($blue-light, 10);
 		}
 	}
 
@@ -124,19 +122,32 @@
 }
 
 .menu-toggle {
-	display: inline-block;
+	display: block;
 	color: white;
+	margin: 0 auto;
 }
 
 .main-navigation.toggled ul {
 	display: block;
+	margin-bottom: 0;
 }
 
 @media screen and (min-width: $bkpt-tablet) {
+	.site-header .container {
+		display: flex;
+	}
+
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
-		display: block;
+
+	.main-navigation {
+		flex: 1;
+		padding: 0;
+		text-align: right;
+
+		ul {
+			display: block;
+		}
 	}
 }
