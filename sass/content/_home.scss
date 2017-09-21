@@ -19,6 +19,13 @@ body.home {
 		padding: 20px 50px;
 		background: white;
 		@include font-size( 3.4 );
+
+		@media screen and (max-width: 600px) {
+			position: relative;
+			display: inline-block;
+			bottom: 0;
+			left: 0;
+		}
 	}
 }
 
@@ -27,16 +34,38 @@ body.home {
 	@include content-on-teal;
 
 	.container {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 50px;
+		grid-row-gap: 20px;
+		grid-auto-rows: minmax(100px, auto);
 	}
 
 	.widget {
-		flex: 1;
+		min-width: ($bkpt-phone / 2) - 20px;
 	}
 
-	.widget + .widget {
-		margin-left: 50px;
+	@media screen and (max-width: $bkpt-tablet) {
+		.container {
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 20px;
+		}
+
+		.widget:last-of-type:nth-of-type(odd) {
+			grid-column: 1 / span 2;
+		}
+	}
+
+	@media screen and (max-width: $bkpt-phone) {
+		.container {
+			grid-template-columns: 1fr;
+			grid-column-gap: 0;
+		}
+
+		.widget {
+			min-width: 100%;
+			grid-column: 1;
+		}
 	}
 }
 
@@ -49,16 +78,34 @@ body.home {
 	}
 
 	.site-events-list {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 50px;
+		grid-row-gap: 20px;
+		grid-auto-rows: minmax(100px, auto);
 
 		.post {
-			flex: 1;
+			min-width: ($bkpt-phone / 2) - 20px;
+			padding: 0;
 			margin: 0;
+		}
 
-			& + .post {
-				margin-top: 0;
-				margin-left: 25px;
-				padding-top: 0;
+		@media screen and (max-width: $bkpt-tablet) {
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 20px;
+
+			.post:last-of-type:nth-of-type(odd) {
+				grid-column: 1 / span 2;
+			}
+		}
+
+		@media screen and (max-width: $bkpt-phone) {
+			grid-template-columns: 1fr;
+			grid-column-gap: 0;
+
+			.post {
+				min-width: 100%;
+				grid-column: 1;
 			}
 		}
 	}
