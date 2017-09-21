@@ -16,19 +16,14 @@ body.page-template-full-width {
 		float: none;
 		overflow: visible;
 		width: 100%;
+	}
 
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
+	.site-content {
+		.widget-area {
+			@include three-up-container;
+		}
 		.widget {
-			flex: 1;
-			min-width: 300px;
-
-			& + .widget {
-				margin-top: 0;
-				padding-left: 50px;
-			}
+			@include three-up-block;
 		}
 	}
 }
