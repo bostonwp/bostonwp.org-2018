@@ -191,3 +191,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // Mock the subscription widget
 require get_template_directory() . '/inc/mock-contact-widget.php';
+
+// Load local events helper class
+require get_template_directory() . '/inc/local-events.php';

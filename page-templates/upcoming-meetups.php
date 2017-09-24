@@ -21,17 +21,26 @@ get_header(); ?>
 					<div class="archive-description"><?php the_content(); ?></div>
 				</header><!-- .page-header -->
 
+				<?php
+					// $meetups = get_post_meta( get_the_ID(), '' );
+					$local_events = new BostonWP_LocalEvents();
+					$events = $local_events->get_all_events();
+				?>
+
+				<?php foreach ( $events as $event ) : ?>
+					<article class="event type-event status-publish hentry">
+						<header class="entry-header">
+							<h2 class="entry-title"><?php $local_events->the_event_fullname( $event ); ?></h2>
+							<div class="entry-meta"><?php $local_events->the_event_time( $event ); ?></div>
+						</header><!-- .entry-header -->
+						<div class="entry-content">
+							<?php $local_events->the_event_description( $event ); ?>
+							<p><?php $local_events->the_event_link( $event ); ?></p>
+						</div>
+					</article>
+				<?php endforeach; ?>
+
 			<?php endwhile; ?>
-
-			<article id="post-##" <?php post_class(); ?>>
-				<header class="entry-header">
-					<h2 class="entry-title">Event title</h2>
-				</header><!-- .entry-header -->
-				<div class="entry-content">
-					<p>This is an event. Pulled from meetup.com?</p>
-				</div>
-			</article>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
