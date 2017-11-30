@@ -60,3 +60,26 @@ ul.job_listings {
 table.job-manager-jobs {
 	width: 100%;
 }
+
+.widget.widget_featured_jobs {
+	.job_listings {
+		border-top: none;
+	}
+
+	.job_listing {
+		border-bottom: none;
+
+		a {
+			background: none !important;
+		}
+
+		a:focus {
+			outline-width: 3px;
+			outline-style: solid;
+		}
+	}
+
+	ul.job_listings li.job_listing ul.meta li {
+		display: block;
+	}
+}

@@ -18,4 +18,11 @@
 		margin: 0 0 10px;
 		@include font-size( 1.8 );
 	}
+
+	.widget_media_image {
+		a:focus {
+			outline-width: 3px;
+			outline-style: solid;
+		}
+	}
 }

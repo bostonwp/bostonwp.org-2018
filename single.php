@@ -17,7 +17,18 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation();
+			if ( 'job_listing' === get_post_type() ) {
+				?><div class="navigation post-navigation" role="navigation">
+					<div class="nav-links">
+						<div class="nav-previous">
+							<a href="<?php echo home_url( '/jobs/' )?>">Return to jobs listings</a>
+						</div>
+					</div>
+				</div>
+				<?php
+			} else {
+				the_post_navigation();
+			}
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
