@@ -38,9 +38,10 @@ class BostonWP_LocalEvents {
 		$all_events = [];
 		foreach ( $this->groups as $group ) {
 			$events = $this->get_group_list( $group, $force );
-			if ( $events ) {
-				$all_events = array_merge( $all_events, $events );
+			if ( is_wp_error( $events ) ) {
+				return [];
 			}
+			$all_events = array_merge( $all_events, $events );
 		}
 
 		usort( $all_events, function( $a, $b ) {
@@ -72,7 +73,7 @@ class BostonWP_LocalEvents {
 
 		$args = array(
 			'key'    => $this->api_key,
-			'page'   => 5,
+			'page'   => 3,
 			'scroll' => 'future_or_past',
 			'fields' => 'simple_html_description',
 		);
@@ -82,18 +83,20 @@ class BostonWP_LocalEvents {
 		$event_response = wp_remote_get( $url );
 		if ( is_wp_error( $event_response ) ) {
 			if ( WP_DEBUG ) {
-				echo 'Something went wrong!';
+				echo "<pre>";
 				var_dump( $event_response );
+				echo "</pre>";
 			}
-			return false;
+			return $event_response;
 		}
 		$code = wp_remote_retrieve_response_code( $event_response );
 		if ( 200 !== $code ) {
 			if ( WP_DEBUG ) {
-				echo 'Something went wrong!';
+				echo "<pre>";
 				var_dump( wp_remote_retrieve_response_message( $event_response ) );
+				echo "</pre>";
 			}
-			return false;
+			return $code;
 		}
 
 		$events = json_decode( wp_remote_retrieve_body( $event_response ) );
