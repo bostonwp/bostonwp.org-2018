@@ -25,5 +25,8 @@ body.page-template-full-width {
 		.widget {
 			@include three-up-block;
 		}
+		.widget + .widget {
+			margin-top: 0;
+		}
 	}
 }
