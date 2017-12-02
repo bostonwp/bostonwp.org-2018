@@ -158,4 +158,33 @@ class BostonWP_LocalEvents {
 			$event->name
 		);
 	}
+
+	/**
+	 * Get relevant classes for an event
+	 *
+	 * @param  $event   object  The event as returned from the API
+	 * @return  string  Classes to be used on the `<article>` for this event
+	 */
+	public function get_event_classes( $event ) {
+		$classes = [
+			'event' => true,
+			'type-event' => true,
+			'status-publish' => true,
+			'hentry' => true,
+			'is-past' => $this->is_past_event( $event )
+		];
+		$classes = apply_filters( 'bostonwp_event_classes', $classes, $event );
+		return join( ' ', array_keys( array_filter( $classes ) ) );
+	}
+
+	/**
+	 * Check if an event is has already happened
+	 *
+	 * @param  $event   object  The event as returned from the API
+	 * @return  bool  true if this has already passed
+	 */
+	public function is_past_event( $event ) {
+		$event_time = intval( $event->time / 1000 + $event->utc_offset / 1000 );
+		return $event_time < time();
+	}
 }
