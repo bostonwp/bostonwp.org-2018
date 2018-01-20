@@ -4,16 +4,44 @@
   "description": "BostonWP Meetup Theme",
   "scripts": {
     "build": "gulp css",
-    "watch": "gulp"
+    "watch": "gulp",
+    "zip": "node zip-theme.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "archiver": "^2.1.0",
+    "autoprefixer": "^7.2.5",
     "gulp": "^3.9.1",
     "gulp-livereload": "^3.8.1",
-    "gulp-postcss": "^7.0.0",
+    "gulp-postcss": "^7.0.1",
     "gulp-sass": "^3.1.0",
-    "gulp-watch": "^4.3.11"
-  }
+    "gulp-watch": "^5.0.0"
+  },
+  "files": [
+    "404.php",
+    "archive.php",
+    "comments.php",
+    "footer.php",
+    "front-page.php",
+    "functions.php",
+    "header.php",
+    "index.php",
+    "page.php",
+    "readme.txt",
+    "screenshot.png",
+    "search.php",
+    "sidebar-footer.php",
+    "sidebar-front-footer.php",
+    "sidebar-front-top.php",
+    "sidebar-full-width.php",
+    "sidebar.php",
+    "single.php",
+    "style.css",
+    "inc/**",
+    "job_manager/**",
+    "js/**",
+    "page-templates/**",
+    "template-parts/**"
+  ]
 }
