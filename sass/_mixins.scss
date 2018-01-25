@@ -74,6 +74,7 @@
 	input[type='submit'],
 	input[type='reset'],
 	button,
+	.wp-block-button a.wp-block-button__link,
 	a.cta-button {
 		color: white;
 		text-decoration: none; //For the cta-button
