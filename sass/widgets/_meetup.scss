@@ -1,1 +1,24 @@
 
+.meetup-events__event-title {
+	margin: 0;
+	@include font-size( 1.8 );
+}
+
+// Specific to the front page callout area
+.front-page-widget-area {
+	.meetup-events__event-title {
+		@include font-size( 2.0 );
+	}
+
+	.meetup-events__event-date {
+		display: block;
+		margin: 0 0 15px;
+		color: inherit;
+		@include font-size( 1.6 );
+	}
+}
+
+// Hide this on widgets, because the widget title is set elsewhere
+.widget .meetup-events__title {
+	display: none;
+}
