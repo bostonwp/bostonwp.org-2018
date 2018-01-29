@@ -6,6 +6,7 @@ Boston WP Theme
 This theme expects the following plugins:
 
 - Gravity Forms
+- Gutenberg
 - SendinBlue Subscribe Form And WP SMTP
 - Meetup Widgets
 - WP Job Manager
@@ -14,6 +15,7 @@ Additionally, these should be installed for better functionality
 
 - Jetpack (+ Akismet + VaultPress)
 - Safe Redirect Manager
+- Yoast SEO
 
 ## Development
 
